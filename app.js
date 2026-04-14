@@ -12,7 +12,8 @@ const envBadge      = document.getElementById('envBadge');
 // Affiche l'environnement (variable injectée via window.ENV ou défaut "dev")
 envBadge.textContent = window.ENV || 'dev';
 
-let tasks  = JSON.parse(localStorage.getItem('taskflow_tasks') || '[]');
+let tasks
+  = JSON.parse(localStorage.getItem('taskflow_tasks') || '[]');
 let filter = 'all';
 
 // ── Sauvegarde ────────────────────────────────────────────────────
